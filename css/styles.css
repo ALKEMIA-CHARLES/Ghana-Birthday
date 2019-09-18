@@ -1,0 +1,31 @@
+body {
+  background-color: chocolate;
+}
+.jumbotron{
+  border: solid wheat;
+}
+.card1 {
+  height: 400px;
+  border: solid white;
+  color: chocolate;
+  background-color: black;
+}
+
+.card2 {
+  height: 400px;
+  border: solid white;
+  color: chocolate;
+  background-color: black;
+}
+.jumbotron {
+  background-color: black;
+}
+.text1 {
+  color: chocolate;
+  text-align: center;
+  font-size: 50px;
+  display: inline block;
+}
+.Ghana-Names {
+  flex-direction: right;
+}
