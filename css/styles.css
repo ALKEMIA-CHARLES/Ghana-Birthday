@@ -1,8 +1,9 @@
 body {
   background-color: chocolate;
 }
-.jumbotron{
+.jumbotron {
   border: solid wheat;
+  background-color: black;
 }
 .card1 {
   height: 400px;
@@ -17,9 +18,6 @@ body {
   color: chocolate;
   background-color: black;
 }
-.jumbotron {
-  background-color: black;
-}
 .text1 {
   color: chocolate;
   text-align: center;
@@ -28,4 +26,22 @@ body {
 }
 .Ghana-Names {
   flex-direction: right;
+}
+.footer-center {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  text-align: center;
+  color: chocolate;
+  
+}
+.card-background{
+  background-color: black;
+  border: 2px solid #ffffff;
+}
+
+@media screen and (max-width: 480px) {
+  .card3 {
+    width: 10rem !important;
+  }
 }
