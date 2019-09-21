@@ -1,65 +1,81 @@
-function getNameGender() {
-  var yob = document.getElementById("year").value;
-  var CC = yob.slice(0, 2);
-  var MM = document.getElementById("month").value;
-  let DD = document.getElementById("day").value;
-  let gender = document.getElementById("gender").value;
-
-  var YY = yob.slice(2);
-
-  console.log(yob + " " + MM + " " + DD + " " + gender);
-
-  // var dob =
-  //   (CC / 4 - 2 * CC - 1 + (5 * YY) / 4 + (26 * (MM + 1)) / 10 + DD) % 7;
-  // alert(dob);
-  const maleNames = [
-    "Kwasi",
-    "Kwadwo",
-    "Kwabena",
-    "Kwaku",
-    "Yaw",
-    "Kofi",
-    "Kwame"
-  ];
-  const femaleNames = [
-    "Akosua",
-    "Adwoa",
-    "Abenaa",
-    "Akua",
-    "Yaa",
-    "Afua",
-    "Ama"
-  ];
-
-  let dob =
-    (CC / 4 - 2 * CC - 1 + (5 * YY) / 4 + (26 * (MM + 1)) / 10 + DD) % 7;
-  alert(dob);
-  //   dob = Math.floor(dob);
-
-  let Days = [
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-    "Sunday"
-  ];
-
-  if (gender === "Male") {
-    alert(
-      "You were born on " +
-        Days[dob - 1] +
-        " and your name is " +
-        maleNames[dob - 1]
-    );
-  } else if (gender === "Female") {
-    alert(
-      "You were born on " +
-        Days[dob - 1] +
-        " and your name is " +
-        femaleNames[dob - 1]
-    );
+function validateFoRm() {
+  var formVal = document.forms["myform"]["namesform"].value;
+  if (validateFoRm == "") {
+    alert("Form must be filled out");
+    return false;
   }
-  getNameGender();
 }
+function checkDate(year, month, day, gender) {
+  var days = {
+    1: 'Sunday',
+    2: 'Monday',
+    3: 'Tuesday',
+    4: 'Wednesday',
+    5: 'Thursday',
+    6: 'Friday',
+    7: 'Saturday',
+  };
+  var YY = document.getElementById("year").value;
+  var MM = document.getElementById("month").value;
+  var DD = document.getElementById("day").value;
+  var gender = document.getElementById("gender").value;
+
+  var CC = parseInt(YY.split("").slice(0, 2).join(""));
+  var DOB = parseInt(((CC / 4) - 2 * CC - 1) + ((5 * YY / 4)) + ((26 * (MM + 1) / 10)) + DD % 7;
+  var dayOfBirth = days[DOB];
+  var refresh = function () {
+    document.getElementById("formElements").reset();
+    document.getElementById('show').reset();
+  }
+
+  var men = {
+    'Sunday': 'Kwasi',
+    'Monday': 'Kwadwo',
+    'Tuesday': 'Kwabena',
+    'Wednesday': 'Kwaku',
+    'Thurday': 'Yaw',
+    'Friday': 'Kofi',
+    'Saturday': 'Kwame',
+
+    if(year !== '' && month !== '' && day !== '' && gender! == '') {
+      if (gender === GND[0]) {
+        console.log('You are a man and your name is' + men[dayOfBirth]);
+    document.getElementById('show').innerText = 'Your Akan name is:' + men[dayOfBirth];
+
+  else {
+      console.log("Invalid option");
+    }
+    console.log(dayOfBirth);
+  }
+ else {
+    alert('cannot accept empty fields');
+  }
+  return DOB;
+}
+      }
+    };
+var women = {
+  'Sunday': 'Akosua',
+  'Monday': 'Adwoa',
+  'Tuesday': 'Abenaa',
+  'Wednesday': 'Akua',
+  'Thursday': 'Yaa',
+  'Friday': 'Afua',
+  'Saturday': 'Ama',
+  if(year !== '' && month !== '' && day !== '' && gender !== '') {
+    if (gender === GND[1]) {
+  console.log('Your are a woman and your names is :' + women[dayOfBirth]);
+  document.getElementById('show').innerText = 'Your Akan name is:' + women[dayOfBirth];
+
+  else {
+    console.log("Invalid option");
+  }
+  console.log(dayOfBirth);
+}
+ else {
+  alert('cannot accept empty fields');
+}
+return DOB;
+    }
+  }
+};
