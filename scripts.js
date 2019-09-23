@@ -1,3 +1,11 @@
+function validateForm() {
+  var formVal = document.forms["formElements"].value
+  if (x == "") {
+    alert("Form must be filled out");
+    return false;
+  }
+}
+
 function checkDate(year, month, day, gender) {
   var days = {
     1: 'Sunday',
@@ -33,9 +41,9 @@ function checkDate(year, month, day, gender) {
   var gender = document.getElementById("gender").value;
 
   var CC = parseInt(YY.split("").slice(0, 2).join(""));
-  
+
   var DOB = parseInt(((CC / 4) - 2 * CC - 1) + ((5 * YY / 4)) + ((26 * (MM + 1) / 10)) + DD) % 7;
-  
+
   var dayOfBirth = days[DOB];
 
   if (year !== '' && month !== '' && day !== '' && gender !== '') {
@@ -47,7 +55,7 @@ function checkDate(year, month, day, gender) {
       console.log('Your are a Woman and Your Name is :' + women[dayOfBirth]);
       document.getElementById('akan').innerText = 'Your Akan name is:' + women[dayOfBirth];​
     } else {
-      console.log('Inalid option');
+      console.log('Invalid option');
     }
     console.log(dayOfBirth);
   } else {

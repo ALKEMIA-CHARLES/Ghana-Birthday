@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
   <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="scripts.js" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -74,6 +75,7 @@
             <div class="container">
               <form>
                 <div class="form-group">
+                  <div id="formElements">
                   <label for="gender">Gender</label>
                   <input type="text" class="form-control" id="gendertag" placeholder="Gender" />
                   <label for="month">Month</label>
@@ -83,16 +85,20 @@
                   <label for="day">Day of Birth</label>
                   <input type="number" class="form-control" id="day" placeholder="day of birth" />
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary" onclick="checkDate()">Submit</button>
+                <button type="reset"  class="btn btn-primary" onclick="refresh()">Reset</button>
               </form>
+            </div>
             </div>
           </div>
         </div>
       </div>
     </div>
     <div class="footer">
+      <div id="akan">
       <p></p>
       <h5>Your Akan name is:</h5>
+      </div>
     </div>
 </body>
 
